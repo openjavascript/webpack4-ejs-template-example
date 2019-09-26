@@ -1,5 +1,5 @@
-import '@/assets/scss/main.scss'
-import 'bootstrap'
+
+import '@/assets/less/common.less'
 
 const test = () => {
   console.log('babel')

@@ -1,2 +1,4 @@
-import '@/assets/scss/main.scss'
+
+import '@/assets/less/common.less'
+
 console.log(12333)
