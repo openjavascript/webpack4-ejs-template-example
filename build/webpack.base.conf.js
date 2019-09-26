@@ -4,6 +4,8 @@ const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const entryPlugins = utils.generateEntriesAndPlugins()
 
+console.log( 'entries:', entryPlugins.entries );
+
 module.exports = {
   entry: {
     ...entryPlugins.entries
