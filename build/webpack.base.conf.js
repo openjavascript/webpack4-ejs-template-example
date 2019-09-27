@@ -3,6 +3,7 @@ const config = require('../config')
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const entryPlugins = utils.generateEntriesAndPlugins()
+const { VueLoaderPlugin } = require('vue-loader');
 
 console.log( 'entries:', entryPlugins.entries );
 
@@ -20,23 +21,20 @@ module.exports = {
       utils.resolve('node_modules'),
       utils.resolve('src')
     ],
-    extensions: ['.js', '.json', 'scss', 'css'],
+    extensions: ['.js', '.json', 'scss', 'css', 'less', 'vue' ],
     alias: {
       '@': utils.resolve('src'),
-      '~': utils.resolve('node_modules')
+      '@root': utils.resolve('./'),
+      '~': utils.resolve('node_modules'),
+	  'vue$': 'vue/dist/vue.esm.js'
     }
   },
   module: {
     rules: [
       {
-        test: require.resolve('jquery'),
-        use: [{
-          loader: 'expose-loader',
-          options: 'jQuery'
-        }, {
-          loader: 'expose-loader',
-          options: '$'
-        }]
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        include: [ utils.resolve('src') ]
       },
       {
         test: /\.js$/,
@@ -48,15 +46,34 @@ module.exports = {
         ],
         use: [{
           loader: 'babel-loader'
-        },
+        }/*,
         {
           loader: 'eslint-loader'
-        }
+        }*/
         ]
       },
       {
         test: /\.(css|scss|sass)$/,
-        use: [process.env.NODE_ENV === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader', 'postcss-loader']
+        use: [
+			process.env.NODE_ENV === 'development' 
+			? 'style-loader' 
+			: MiniCssExtractPlugin.loader
+			, 'css-loader', 'sass-loader', 'postcss-loader'
+		]
+      },
+      {
+        test: /\.less$/,
+        use: [
+          {
+            loader: 'style-loader', // creates style nodes from JS strings
+          },
+          {
+            loader: 'css-loader', // translates CSS into CommonJS
+          },
+          {
+            loader: 'less-loader', // compiles Less to CSS
+          },
+        ],
       },
       {
         test: /\.html$/,
@@ -91,32 +108,20 @@ module.exports = {
       },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        include: [utils.resolve('src')],
-        loader: 'url-loader',
+        include: [utils.resolve('src'), utils.resolve('node_modules')],
+        loader: 'file-loader',
         options: {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      },
-      {
-        test: /\.less$/,
-        use: [
-          {
-            loader: 'style-loader', // creates style nodes from JS strings
-          },
-          {
-            loader: 'css-loader', // translates CSS into CommonJS
-          },
-          {
-            loader: 'less-loader', // compiles Less to CSS
-          },
-        ],
       }
+
     ]
   },
   plugins: [
     ...entryPlugins.plugins,
     // 全局暴露统一入口
+	new VueLoaderPlugin(),
     new webpack.ProvidePlugin({
       // $: 'jquery'
     })

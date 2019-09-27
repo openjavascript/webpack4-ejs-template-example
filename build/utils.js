@@ -96,7 +96,7 @@ exports.createNotifierCallback = () => {
 }
 
 exports.generateEntriesAndPlugins = () => {
-  const entryFiles = glob.sync(path.resolve(__dirname, '../src/pages/**/main.js'))
+  const entryFiles = glob.sync(path.resolve(__dirname, '../src/pages/**/index.js'))
   const config = {
     hash: true,
     inject: true
