@@ -6,6 +6,9 @@ const entryPlugins = utils.generateEntriesAndPlugins()
 const { VueLoaderPlugin } = require('vue-loader');
 
 console.log( 'entries:', entryPlugins.entries );
+console.log( 'process.env.NODE_ENV', process.env.NODE_ENV );
+
+const assetsPublicPath = '../../'; 
 
 module.exports = {
   entry: {
@@ -93,6 +96,7 @@ module.exports = {
         // include: [utils.resolve('src')],
         loader: 'url-loader',
         options: {
+          publicPath: process.env.NODE_ENV === 'production' ? assetsPublicPath : config.dev.assetsPublicPath,
           limit: 10000,
           name: utils.assetsPath('img/[name].[hash:7].[ext]')
         }
@@ -102,6 +106,7 @@ module.exports = {
         include: [utils.resolve('src')],
         loader: 'url-loader',
         options: {
+          publicPath: process.env.NODE_ENV === 'production' ? assetsPublicPath : config.dev.assetsPublicPath,
           limit: 10000,
           name: utils.assetsPath('media/[name].[hash:7].[ext]')
         }
@@ -111,6 +116,7 @@ module.exports = {
         include: [utils.resolve('src'), utils.resolve('node_modules')],
         loader: 'file-loader',
         options: {
+          publicPath: process.env.NODE_ENV === 'production' ? assetsPublicPath : config.dev.assetsPublicPath,
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }

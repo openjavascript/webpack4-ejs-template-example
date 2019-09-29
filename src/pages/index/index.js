@@ -13,7 +13,8 @@ Vue.use(ElementUI)
 Vue.use(VueAxios, axios)
 //Vue.axios.defaults.withCredentials = true
 
+console.log( 'code from vue', Date.now() );
+
 new Vue({
-  store,
   render: h => h(App)
 }).$mount( '#app' );

@@ -18,7 +18,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     compress: true,
     host: 'localhost',
     port: 8000,
-    open: true,
+    open: false,
     openPage: '',
     publicPath: '/'
   },
