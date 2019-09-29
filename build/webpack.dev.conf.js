@@ -15,12 +15,21 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     clientLogLevel: 'warning',
     hot: false,
     contentBase: path.resolve(__dirname, '../src'), // since we use CopyWebpackPlugin.
-    compress: true,
+    compress: false,
     host: 'localhost',
     port: 8000,
     open: false,
     openPage: '',
-    publicPath: '/'
+    publicPath: '/',
+    headers: {
+        "Access-Control-Allow-Origin": "*"
+    },
+    before: function(app) {
+        //console.log( app );
+        app.get('*.css', function(req, res) {
+            res.sendStatus(200);
+        });
+    }
   },
   plugins: [
     new webpack.DefinePlugin({
