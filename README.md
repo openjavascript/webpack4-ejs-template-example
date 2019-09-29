@@ -1,5 +1,5 @@
-# webpack4-ejs-template-example
-example project for continue new project
+# fqt-todo
+chrome browser plugin - four quadrant of time management todolist
 
 ## init
   yarn

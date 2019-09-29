@@ -1,13 +1,14 @@
 {
-  "name": "webpack-pages",
-  "version": "1.0.1",
+  "name": "fqt-todo",
+  "version": "1.0.0",
+  "description": "chrome browser plugin - four quadrant of time management todolist",
   "main": "index.js",
   "scripts": {
     "serve": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "build": "node build/build.js",
     "lint": "eslint --ext .js src"
   },
-  "author": "tthd@163.com",
+  "author": "suches<suches@btbtd.org>",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.1.2",
