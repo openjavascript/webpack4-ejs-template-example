@@ -1,5 +1,5 @@
 # fqt-todo
-chrome browser plugin - four quadrant of time management todolist
+    example project for continue new project
 
 ## init
   yarn

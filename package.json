@@ -1,5 +1,5 @@
 {
-  "name": "fqt-todo",
+  "name": "webpack4-ejs-template-example",
   "version": "1.0.0",
   "description": "chrome browser plugin - four quadrant of time management todolist",
   "main": "index.js",
@@ -68,9 +68,13 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
+    "parseboolean": "^1.0.0",
+    "store": "^2.0.12",
     "vue": "^2.6.10",
     "vue-axios": "^2.1.4",
+    "vue-i18n": "^8.14.1",
     "vue-loader": "^15.7.1",
-    "vue-router": "^3.1.3"
+    "vue-router": "^3.1.3",
+    "vuex": "^3.1.1"
   }
 }
