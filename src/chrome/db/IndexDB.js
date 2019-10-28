@@ -6,7 +6,6 @@ import IDBExportImport from '../utils/indexeddb-export-import.js'
 import moment from '../utils/moment.js'
 import saveAs from '../utils/FileSaver.js'
 
-import sync_data from '../data/sync_data.js';
 axios.defaults.crossDomain = true;
 axios.defaults.withCredentials = true
 
@@ -308,11 +307,6 @@ export default class IndexDB extends BaseDB {
                         resolve();
                     });
                 });
-                /*
-                this.parseRequestData( {data:sync_data}, ()=>{
-                    resolve();
-                });
-                */
             }).catch(function (e) {
                 reject( e )
             });

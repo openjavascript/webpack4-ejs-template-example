@@ -5687,6 +5687,11 @@ parse-json@^4.0.0:
     error-ex "^1.3.1"
     json-parse-better-errors "^1.0.1"
 
+parseboolean@^1.0.0:
+  version "1.0.0"
+  resolved "https://af-biz.360es.cn:443/artifactory/api/npm/ats-npm/parseboolean/download/parseboolean-1.0.0.tgz#efac90efb06a7062c159e184d3a81abb84bcc716"
+  integrity sha1-76yQ77BqcGLBWeGE06gau4S8xxY=
+
 parseurl@~1.3.2:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/parseurl/-/parseurl-1.3.2.tgz#fc289d4ed8993119460c156253262cdc8de65bf3"
@@ -7272,6 +7277,11 @@ stdout-stream@^1.4.0:
   dependencies:
     readable-stream "^2.0.1"
 
+store@^2.0.12:
+  version "2.0.12"
+  resolved "https://af-biz.360es.cn:443/artifactory/api/npm/ats-npm/store/download/store-2.0.12.tgz#8c534e2a0b831f72b75fc5f1119857c44ef5d593"
+  integrity sha1-jFNOKguDH3K3X8XxEZhXxE711ZM=
+
 stream-browserify@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/stream-browserify/-/stream-browserify-2.0.1.tgz#66266ee5f9bdb9940a4e4514cafb43bb71e5c9db"
@@ -7895,6 +7905,11 @@ vue-hot-reload-api@^2.3.0:
   resolved "http://registry.npm.360es.cn/vue-hot-reload-api/download/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
   integrity sha1-UylVzB6yCKPZkLOp+acFdGV+CPI=
 
+vue-i18n@^8.14.1:
+  version "8.15.0"
+  resolved "https://af-biz.360es.cn:443/artifactory/api/npm/ats-npm/vue-i18n/download/vue-i18n-8.15.0.tgz#9b11ef8e7a124f67cdf788c8c90a81f3606240ed"
+  integrity sha1-mxHvjnoST2fN94jIyQqB82BiQO0=
+
 vue-loader@^15.7.1:
   version "15.7.1"
   resolved "http://registry.npm.360es.cn/vue-loader/download/vue-loader-15.7.1.tgz#6ccacd4122aa80f69baaac08ff295a62e3aefcfd"
@@ -7936,6 +7951,11 @@ vue@^2.6.10:
   version "2.6.10"
   resolved "http://registry.npm.360es.cn/vue/download/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
   integrity sha1-pysaQqTYKnIepDjRtr9V5mGVxjc=
+
+vuex@^3.1.1:
+  version "3.1.1"
+  resolved "https://af-biz.360es.cn:443/artifactory/api/npm/ats-npm/vuex/download/vuex-3.1.1.tgz#0c264bfe30cdbccf96ab9db3177d211828a5910e"
+  integrity sha1-DCZL/jDNvM+Wq52zF30hGCilkQ4=
 
 watchpack@^1.5.0:
   version "1.6.0"
