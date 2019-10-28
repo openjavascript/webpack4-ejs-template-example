@@ -36,7 +36,6 @@
 
 <script>
 import moment from '@src/chrome/utils/moment.js'
-import config from '@src/chrome/config'
 import dataMixin from '@src/mixin/data.js'
 const packInfo = require( '@root/package.json' )
 export default {
