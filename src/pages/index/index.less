@@ -1,5 +1,56 @@
 
+
+@import "../../assets/less/common.less";
+
 body {
-    width: 334px;
     text-align: left;
 }
+
+.main-box {
+    padding: 0;
+}
+
+.type-main {
+    height: 100%;
+
+    .type-box {
+        height: 50%;
+        position: relative;
+    }
+
+    .type-box-0 
+    , .type-box-1 
+    {
+        height: 49%;
+    }
+
+    .type-box-2 
+    , .type-box-3 
+    {
+        height: 51%;
+        z-index: 3;
+    }
+
+    .type-header {
+        line-height: 40px;
+        font-weight: bold;
+        font-size: 18px;
+        padding-left: 10px;
+        cursor: pointer;
+    }
+
+    .type-header label {
+        cursor: pointer;
+    }
+
+    .type-header .el-button {
+        padding: 5px;
+    }
+
+    .type-header  > .el-col:last-child {
+        text-align: right;
+        padding-right: 10px;
+    }
+}
+
+

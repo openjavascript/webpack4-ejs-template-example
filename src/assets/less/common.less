@@ -1,4 +1,78 @@
 
+
+@barHeight: 40px;
+@headerBgColor: #B3C0D1;
+
+@type0Color: #F76333;
+@type0Bgcolor: #FFEDE7;
+
+@type1Color: #FEAE6A;
+@type1Bgcolor: #FFEFCB;
+
+@type2Color: #3FB6DA;
+@type2Bgcolor: #D6F4FE;
+
+@type3Color: #89C557;
+@type3Bgcolor: #EFD;
+
 body {
-    background-color: #fff;
+    font-size: 12px;
+    margin: 0;
+}
+
+.el-icon-logo {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background: url( "/assets/img/fqt-todo24.png" ) no-repeat left top;
+    margin-bottom: -6px;
+}
+
+.search_hl {
+    background-color: yellow;
+    display: inline-block;
+    padding: 0 0px;
+}
+
+.el-loading-mask {
+    position: fixed;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.main-box .el-row 
+, .el-dialog__wrapper .el-row
+{
+    margin: 0 auto;
+}
+
+.type-header {
+    color: @type0Color;
+    background-color: @type0Bgcolor;
+}
+
+.type-box-1 .type-header {
+    color: @type1Color;
+    background-color: @type1Bgcolor;
+}
+
+.type-box-2 .type-header {
+    color: @type2Color;
+    background-color: @type2Bgcolor;
+}
+
+.type-box-3 .type-header {
+    color: @type3Color;
+    background-color: @type3Bgcolor;
+}
+
+.search_pre {
+    margin: 0;
+}
+
+.edit-drawer {
+    width: 580px!important;
 }

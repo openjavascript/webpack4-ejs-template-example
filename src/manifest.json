@@ -1,0 +1,48 @@
+{
+    "name": "webpack4-ejs-template-example"
+    , "short_name": "wetx"
+    , "version": "1.0"
+    , "description": "example project for continue new project"
+    , "manifest_version": 2
+    , "browser_action": {
+        "default_popup": "popup.html"
+        , "default_icon": "./assets/img/fqt-todo16.png"
+        , "default_title": "fqt-todo"
+    }
+    , "background": {
+        "page": "./chrome/background.html"
+    }
+    , "permissions": [ 
+        "tabs"
+        , "activeTab"
+		, "identity"
+        , "windows"
+        , "storage"
+        , "contextMenus"
+        , "notifications"
+        , "webRequest"
+		, "https://accounts.google.com/o/oauth2/token"
+		, "https://github.com/"
+		, "http://btbtd.org/api/*"
+    ]
+	, "web_accessible_resources" : [
+		"chrome/utils/oauth2/oauth2.html"
+	]
+	, "content_scripts": [
+		{
+			"matches": ["http://btbtd.org/api/fqttodo/token*"]
+			, "js": ["chrome/utils/oauth2/oauth2_inject.js"]
+			, "run_at": "document_start"
+		}
+	]
+	, "options_page": "index.html"
+    , "homepage_url": "https://github.com/hnjd-fe/fqt-todo"
+    , "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+    , "icons": {
+      "16": "./assets/img/fqt-todo16.png",
+      "32": "./assets/img/fqt-todo32.png",
+      "48": "./assets/img/fqt-todo48.png",
+      "128": "./assets/img/fqt-todo128.png"
+    }
+}
+
