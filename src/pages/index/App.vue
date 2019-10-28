@@ -11,7 +11,30 @@
                     <i class="el-icon-s-home"></i>{{$t('mainPage')}}
                   </el-menu-item>
                 </el-link>
-    
+                <router-link to="importExport.html">
+                  <el-menu-item index="2">
+                    <i class="el-icon-upload2"></i>{{$t('importExport')}}
+                  </el-menu-item>
+                </router-link>
+
+                <router-link to="sync.html">
+                  <el-menu-item index="6" >
+                    <i class="el-icon-upload"></i>{{$t('sync')}}
+                  </el-menu-item>
+                </router-link>
+
+                <router-link to="dataManage.html" v-if="devMode">
+                  <el-menu-item index="3" >
+                    <i class="el-icon-data-board"></i>{{$t('dataManage')}}
+
+                  </el-menu-item>
+                </router-link>
+
+                <el-link href="popup.html" target="_fqttodo_popup" v-if="devMode">
+                  <el-menu-item index="4">
+                    <i class="el-icon-folder-opened"></i>{{$t('popupPage')}} 
+                  </el-menu-item>
+                </el-link>
 
                 <router-link to="setting.html">
                   <el-menu-item index="5">
@@ -64,9 +87,9 @@ export default {
 		devModeChange( val ){
 			this.devMode = val;
 		}
-¡¡¡¡¡¡¡¡, refresh:function(){
-¡¡¡¡¡¡¡¡¡¡¡¡this.$router.go(0);
-¡¡¡¡¡¡¡¡}
+ã€€ã€€ã€€ã€€, refresh:function(){
+ã€€ã€€ã€€ã€€ã€€ã€€this.$router.go(0);
+ã€€ã€€ã€€ã€€}
 	}
 }
 </script>
