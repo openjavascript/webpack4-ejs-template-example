@@ -1,13 +1,13 @@
 {
     "name": "webpack4-ejs-template-example"
-    , "short_name": "wetx"
+    , "short_name": "webpack4ejstemplateexample"
     , "version": "1.0"
     , "description": "example project for continue new project"
     , "manifest_version": 2
     , "browser_action": {
         "default_popup": "popup.html"
-        , "default_icon": "./assets/img/fqt-todo16.png"
-        , "default_title": "fqt-todo"
+        , "default_icon": "./assets/img/logo16.png"
+        , "default_title": "webpack4-ejs-template-example"
     }
     , "background": {
         "page": "./chrome/background.html"
@@ -30,19 +30,19 @@
 	]
 	, "content_scripts": [
 		{
-			"matches": ["http://btbtd.org/api/fqttodo/token*"]
+			"matches": ["http://btbtd.org/api/webpack4ejstemplateexample/token*"]
 			, "js": ["chrome/utils/oauth2/oauth2_inject.js"]
 			, "run_at": "document_start"
 		}
 	]
 	, "options_page": "index.html"
-    , "homepage_url": "https://github.com/hnjd-fe/fqt-todo"
+    , "homepage_url": "https://github.com/hnjd-fe/webpack4-ejs-template-example"
     , "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
     , "icons": {
-      "16": "./assets/img/fqt-todo16.png",
-      "32": "./assets/img/fqt-todo32.png",
-      "48": "./assets/img/fqt-todo48.png",
-      "128": "./assets/img/fqt-todo128.png"
+      "16": "./assets/img/logo16.png",
+      "32": "./assets/img/logo32.png",
+      "48": "./assets/img/logo48.png",
+      "128": "./assets/img/logo128.png"
     }
 }
 

@@ -7,9 +7,9 @@
 ## dev
   yarn serve 
   
-  http://localhost.:8001/index.html
+  http://localhost:8000/index.html
   
-  http://localhost.:8001/login.html
+  http://localhost:8000/popup.html
   
 ## publish
   yarn build 

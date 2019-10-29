@@ -5,6 +5,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const entryPlugins = utils.generateEntriesAndPlugins()
 const { VueLoaderPlugin } = require('vue-loader');
 
+const packageConfig = require('../package.json')
+
 console.log( 'entries:', entryPlugins.entries );
 console.log( 'process.env.NODE_ENV', process.env.NODE_ENV );
 

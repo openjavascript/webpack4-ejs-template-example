@@ -1,5 +1,5 @@
 
-# webpack-ejs-template-example changelog
+# webpack4-ejs-template-example changelog
 
 
 ## v1.0

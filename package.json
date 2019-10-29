@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "serve": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "build": "node build/build.js",
+    "build": "npm run clear && node build/build.js && npm run finish",
+    "finish": "sh ./build/sh/finishbuild.sh",
+    "backup": "sh ./build/sh/backup.sh",
+    "clear": "rm -rf ./dist",
+    "packzip": "rm -rf dist.zip && zip -r dist.zip ./dist",
     "lint": "eslint --ext .js src"
   },
   "author": "suches<suches@btbtd.org>",

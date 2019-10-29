@@ -6,31 +6,13 @@
               default-active="1"
               class="el-menu-vertical-demo"
               >
-                <el-link href="index.html" target="_fqttodo_index">
+                <el-link href="index.html" :target="`_${packInfo.name}_index`">
                   <el-menu-item index="1">
                     <i class="el-icon-s-home"></i>{{$t('mainPage')}}
                   </el-menu-item>
                 </el-link>
-                <router-link to="importExport.html">
-                  <el-menu-item index="2">
-                    <i class="el-icon-upload2"></i>{{$t('importExport')}}
-                  </el-menu-item>
-                </router-link>
-
-                <router-link to="sync.html">
-                  <el-menu-item index="6" >
-                    <i class="el-icon-upload"></i>{{$t('sync')}}
-                  </el-menu-item>
-                </router-link>
-
-                <router-link to="dataManage.html" v-if="devMode">
-                  <el-menu-item index="3" >
-                    <i class="el-icon-data-board"></i>{{$t('dataManage')}}
-
-                  </el-menu-item>
-                </router-link>
-
-                <el-link href="popup.html" target="_fqttodo_popup" v-if="devMode">
+ 
+                <el-link href="popup.html" :target="`_${packInfo.name}_popup`" v-if="devMode">
                   <el-menu-item index="4">
                     <i class="el-icon-folder-opened"></i>{{$t('popupPage')}} 
                   </el-menu-item>
@@ -70,12 +52,14 @@ body {
 </style>
 
 <script>
-window.name = '_fqttodo_index';
+const packInfo = require( '@root/package.json' )
+window.name = `_${packInfo.name}_index`;
 
 export default {
 	data() {
 		return {
             devMode: this.globalVar.devMode
+            , packInfo
 		}
 	}
     , components: {
