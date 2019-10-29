@@ -1,8 +1,9 @@
 {
     "name": "webpack4-ejs-template-example"
     , "short_name": "webpack4ejstemplateexample"
+    , "default_locale": "zh_CN"
     , "version": "1.0"
-    , "description": "example project for continue new project"
+    , "description": "__MSG_description__"
     , "manifest_version": 2
     , "browser_action": {
         "default_popup": "popup.html"
